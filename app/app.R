@@ -1063,7 +1063,7 @@ server = function(input, output, session) {
   cbf_map = function(cols, cvd) {
     if (!length(cols)) return(NULL)
     
-    hcl = get_hcl_matrix(cols)
+    hcl = cols4all:::get_hcl_matrix(cols)
     
     cols_cvd = cols4all:::sim_cvd(cols, cvd)
     
@@ -1075,7 +1075,7 @@ server = function(input, output, session) {
   cbf_lines = function(cols, cvd) {
     if (!length(cols)) return(NULL)
     
-    hcl = get_hcl_matrix(cols)
+    hcl = cols4all:::get_hcl_matrix(cols)
     
     cols_cvd = cols4all:::sim_cvd(cols, cvd)
     cols4all:::c4a_plot_lines(cols = c(cols_cvd[1], col2 = cols_cvd[2]), lwd = 3, asp = .9, dark = input$dark)
